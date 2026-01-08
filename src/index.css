@@ -17,12 +17,7 @@ html {
 }
 
 body {
-  /* Final Deep Red Wallpaper Settings */
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(128, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  /* RESTORED: Removed the radial glow so your wallpaper is visible again */
   background-color: #000000;
   background-attachment: fixed;
   color: #f8fafc;
@@ -35,7 +30,7 @@ body {
   min-height: 100vh;
 }
 
-/* Shooting Star Animation - Added to the bottom */
+/* KEEPING ONLY THE ANIMATION: This doesn't affect your wallpaper */
 .shooting-star {
   position: absolute;
   width: 2px;
