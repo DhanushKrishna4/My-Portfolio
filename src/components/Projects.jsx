@@ -46,7 +46,6 @@ const Projects = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // CHANGED: Increased threshold to 0.3 so it waits longer before triggering
         if (entry.isIntersecting) {
           setIsVisible(true);
           observer.disconnect();
@@ -68,35 +67,36 @@ const Projects = () => {
         <h2 className="text-4xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
+            /* WRAPPER DIV: Handles the Float Up Animation ONLY */
             <div 
               key={index}
-              /* UPDATED: Added 'hover:scale-105' and 'transition-all duration-300' for smooth zoom */
-              className={`bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden hover:border-red-900/50 transition-all duration-300 hover:scale-105 p-6 flex flex-col justify-between ${
-                isVisible ? 'animate-fade-in-up' : 'opacity-0'
-              }`}
+              className={`${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div>
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-slate-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, i) => (
-                    <span key={i} className="text-xs font-mono text-red-500 bg-red-500/10 px-2 py-1 rounded">
-                      {tech}
-                    </span>
-                  ))}
+              {/* INNER CARD DIV: Handles the Styling and the Zoom Effect */}
+              <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden hover:border-red-900/50 transition-all duration-300 hover:scale-105 p-6 flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-slate-400 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((tech, i) => (
+                      <span key={i} className="text-xs font-mono text-red-500 bg-red-500/10 px-2 py-1 rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-slate-400 hover:text-white transition-colors flex items-center gap-1"
-                >
-                  <Github size={20} />
-                  <span className="text-sm">View Source Code</span>
-                </a>
+                <div className="flex gap-4">
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+                  >
+                    <Github size={20} />
+                    <span className="text-sm">View Source Code</span>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
