@@ -3,65 +3,27 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  /* FLIPPED: Linear gradient now runs Top-Left to Bottom-Right */
-  background: linear-gradient(
-    135deg,
-    #000000 0%,
-    #000000 15%,
-    #450a0a 50%,
-    #000000 85%,
-    #000000 100%
-  );
-  background-attachment: scroll;
+  background-color: #09090b;
+  color: #ffffff;
 }
 
 body {
-  background: transparent;
-  color: #f8fafc;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
-#root {
-  min-height: 100vh;
-}
-
-/* NO CHANGES: Keeping your current shooting star logic exactly as is */
-.shooting-star {
-  position: fixed;
-  z-index: 5;
-  width: 2px;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent);
-  box-shadow: 0 0 10px 2px rgba(185, 28, 28, 0.8);
-  border-radius: 50%;
-  opacity: 0;
-  transform: rotate(45deg);
-  animation: shoot linear infinite;
-}
-
-@keyframes shoot {
-  0% {
-    transform: rotate(45deg) translateX(0);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(45deg) translateX(1200px);
+/* Add this Animation Section */
+@keyframes fadeInUp {
+  from {
     opacity: 0;
+    transform: translateY(40px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0; /* Start invisible */
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
