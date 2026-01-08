@@ -1,31 +1,36 @@
 import React from 'react';
 
 const About = () => {
-  const skills = ["Python", "C", "Java", "C++", "C#", "SQL", "HTML", "CSS", "JavaScript", "Scratch"];
+  const skills = [
+    "Python", "C", "Java", "C++", "C#", "SQL", "HTML", "CSS", "JavaScript", "Scratch"
+  ];
 
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="py-20 px-4 relative z-10">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-100">
-          {/* Changed red-700 to red-800 */}
-          About <span className="text-red-800">Me</span>
-        </h2>
-        <div className="bg-white/5 p-8 rounded-2xl border border-red-900/20 backdrop-blur-sm shadow-2xl shadow-red-900/5">
-          <p className="text-slate-300 text-lg leading-relaxed mb-8">
-            I am a senior Computer Science undergraduate at BITS Pilani Dubai Campus. 
+        <div className="flex items-center gap-4 mb-12">
+          <div className="h-8 w-1 bg-red-600"></div>
+          <h2 className="text-4xl font-bold">About Me</h2>
+        </div>
+        
+        <div className="bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl mb-12">
+          <p className="text-slate-300 text-lg leading-relaxed">
+            I am a senior Computer Science undergraduate at BITS Pilani Dubai Campus. I am a Python enthusiast 
+            with a strong drive to explore the intersection of data and artificial intelligence. I enjoy building 
+            tools that solve real-world problems and automate complex tasks.
           </p>
-          <h3 className="text-xl font-semibold text-slate-100 mb-4">Technical Skills</h3>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill, index) => (
-              <span 
-                key={index} 
-                // Changed hover:border-red-600 to hover:border-red-700
-                className="px-4 py-2 bg-black/40 text-slate-300 rounded-full text-sm font-medium border border-red-900/30 hover:border-red-700 hover:text-white hover:bg-red-950/40 transition-all duration-300 cursor-default"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+        </div>
+
+        <h3 className="text-2xl font-bold mb-8">Technical Skills</h3>
+        <div className="flex flex-wrap gap-4">
+          {skills.map((skill, index) => (
+            <span 
+              key={index}
+              className="px-6 py-3 bg-zinc-900/50 border border-zinc-800 rounded-xl text-slate-300 hover:border-red-900/50 transition-colors"
+            >
+              {skill}
+            </span>
+          ))}
         </div>
       </div>
     </section>
