@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -18,7 +18,8 @@ const Hero = () => {
         
         {/* Restored Location from Screenshot */}
         <div className="flex items-center justify-center gap-2 text-slate-500 mb-10">
-          <span className="text-sm">📍 BITS Pilani Dubai Campus</span>
+          <MapPin size={16} />
+          <span className="text-sm">BITS Pilani Dubai Campus</span>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
