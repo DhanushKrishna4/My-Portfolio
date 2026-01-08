@@ -17,8 +17,8 @@ html {
 }
 
 body {
-  /* RESTORED: Removed the radial glow so your wallpaper is visible again */
-  background-color: #000000;
+  /* RESTORED: The diagonal red-to-black gradient from your screenshot */
+  background: linear-gradient(135deg, #000000 0%, #000000 50%, #450a0a 100%);
   background-attachment: fixed;
   color: #f8fafc;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
 }
 
-/* KEEPING ONLY THE ANIMATION: This doesn't affect your wallpaper */
+/* Shooting Stars Animation */
 .shooting-star {
   position: absolute;
   width: 2px;
