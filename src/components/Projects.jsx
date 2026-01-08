@@ -70,7 +70,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className={`bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden hover:border-red-900/50 transition-colors p-6 flex flex-col justify-between ${
+              /* UPDATED: Added 'hover:scale-105' and 'transition-all duration-300' for smooth zoom */
+              className={`bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden hover:border-red-900/50 transition-all duration-300 hover:scale-105 p-6 flex flex-col justify-between ${
                 isVisible ? 'animate-fade-in-up' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 150}ms` }}
