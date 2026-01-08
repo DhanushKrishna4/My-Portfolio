@@ -6,9 +6,12 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative z-10">
       <div className="text-center px-4">
         <h2 className="text-xl md:text-2xl text-slate-400 mb-4">Hi, I'm</h2>
+        
+        {/* COLOR UPDATE: Both names are now inside the red span */}
         <h1 className="text-6xl md:text-8xl font-bold mb-6">
-          <span className="text-red-600">Dhanush</span> Krishna
+          <span className="text-red-600">Dhanush Krishna</span>
         </h1>
+        
         <p className="text-2xl md:text-3xl text-slate-300 mb-4 font-light">
           Computer Science Student
         </p>
@@ -16,7 +19,6 @@ const Hero = () => {
           Aspiring AI Engineer passionate about Machine Learning and algorithms. I build intelligent systems that solve real-world problems.
         </p>
         
-        {/* Restored Location from Screenshot */}
         <div className="flex items-center justify-center gap-2 text-slate-500 mb-10">
           <MapPin size={16} />
           <span className="text-sm">BITS Pilani Dubai Campus</span>
