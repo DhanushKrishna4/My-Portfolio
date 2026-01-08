@@ -14,12 +14,21 @@
 
 html {
   scroll-behavior: smooth;
+  /* LINEAR DIAGONAL ONLY: Top-right to bottom-left beam */
+  /* Stops at 0-20% (black), 50% (red beam), 80-100% (black) */
+  background: linear-gradient(
+    225deg,
+    #000000 0%,
+    #000000 20%,
+    #450a0a 50%,
+    #000000 80%,
+    #000000 100%
+  );
+  background-attachment: scroll; /* Stretches the beam across the whole page */
 }
 
 body {
-  /* YOUR BACKGROUND: Diagonal red-to-black gradient */
-  background: linear-gradient(135deg, #000000 0%, #000000 50%, #450a0a 100%);
-  background-attachment: fixed;
+  background: transparent;
   color: #f8fafc;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   min-height: 100vh;
@@ -30,7 +39,7 @@ body {
   min-height: 100vh;
 }
 
-/* Shooting Star Logic */
+/* NO CHANGES TO STARS: Keeping your current logic */
 .shooting-star {
   position: fixed;
   z-index: 5;
@@ -53,7 +62,6 @@ body {
     opacity: 1;
   }
   100% {
-    /* Increased distance to 1200px to ensure they clear the screen from the corner */
     transform: rotate(45deg) translateX(1200px);
     opacity: 0;
   }
