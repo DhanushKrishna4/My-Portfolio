@@ -2,36 +2,20 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="fixed w-full z-50 px-6 py-4 bg-black/50 backdrop-blur-md border-b border-white/5">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        {/* Minimalist Text Logo (Exactly like the original blue version) */}
-        <div className="flex items-center group cursor-pointer">
-          <div className="relative flex items-baseline">
-            {/* "DK" is now just raw text, no background square */}
-            <span className="text-2xl font-bold text-white tracking-tighter">
-              DK
-            </span>
-            {/* The Red Dot - placed at the bottom right of the K */}
-            <div className="w-2 h-2 bg-red-600 rounded-full ml-1 shadow-[0_0_10px_rgba(220,38,38,0.8)]"></div>
-          </div>
-          
-          {/* Static White Name - Slides out on hover */}
-          <span className="ml-4 font-bold text-white opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
-            Dhanush Krishna
-          </span>
-        </div>
-
-        {/* Nav Links */}
-        <div className="hidden md:flex gap-8">
-          {['Home', 'About', 'Projects', 'Contact'].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-slate-400 hover:text-red-500 transition-colors"
-            >
-              {item}
-            </a>
-          ))}
+    <nav className="fixed top-0 left-0 right-0 bg-zinc-950/80 backdrop-blur-md z-50 border-b border-zinc-800">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+        
+        {/* LOGO UPDATE: Added 'flex items-baseline' to align the dot's bottom with the text */}
+        <a href="#home" className="text-2xl font-bold font-mono text-white flex items-baseline">
+          DK<span className="text-red-600">.</span>
+        </a>
+        
+        {/* Navigation Links */}
+        <div className="flex gap-8 items-center">
+          <a href="#home" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Home</a>
+          <a href="#about" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">About</a>
+          <a href="#projects" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Projects</a>
+          <a href="#contact" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Contact</a>
         </div>
       </div>
     </nav>
