@@ -14,9 +14,9 @@
 
 html {
   scroll-behavior: smooth;
-  /* CHANGE: Linear gradient from top-right (225deg) to bottom-left */
+  /* FLIPPED: Linear gradient now runs Top-Left to Bottom-Right */
   background: linear-gradient(
-    225deg,
+    135deg,
     #000000 0%,
     #000000 15%,
     #450a0a 50%,
