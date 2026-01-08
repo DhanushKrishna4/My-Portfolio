@@ -1,5 +1,4 @@
 import React from 'react';
-import profilePic from '../assets/profile-pic.png'; // Make sure this path is correct for your image
 
 const Hero = () => {
   return (
