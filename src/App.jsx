@@ -4,19 +4,22 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import ShootingStars from './components/ShootingStars';
 
 function App() {
   return (
-    // "135deg" creates the diagonal angle.
-    // "rgba(153,27,27,0.4)" is the transparent red color.
-    <div className="min-h-screen bg-[linear-gradient(135deg,black_20%,rgba(153,27,27,0.4)_50%,black_80%)] text-slate-200 font-sans selection:bg-red-500 selection:text-white">
+    <div className="relative min-h-screen">
+      {/* Background layer */}
+      <ShootingStars />
       
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-      
+      {/* Content layer */}
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
     </div>
   );
 }
