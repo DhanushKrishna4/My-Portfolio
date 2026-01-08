@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
 }
 
-/* Shooting Star Logic - RESTORED & DIRECTION FIXED */
+/* Shooting Star Logic */
 .shooting-star {
   position: fixed;
   z-index: 5;
@@ -53,7 +53,8 @@ body {
     opacity: 1;
   }
   100% {
-    transform: rotate(45deg) translateX(800px);
+    /* Increased distance to 1200px to ensure they clear the screen from the corner */
+    transform: rotate(45deg) translateX(1200px);
     opacity: 0;
   }
 }
