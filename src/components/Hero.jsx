@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 bg-black">
       <div className="text-center max-w-4xl mx-auto">
         
         {/* Intro Text */}
@@ -10,9 +10,9 @@ const Hero = () => {
           Hi, I'm
         </h2>
         
-        {/* Name with Red Gradient */}
+        {/* --- CHANGE 2: DEEPER RED GRADIENT --- */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-          <span className="bg-gradient-to-r from-red-500 to-rose-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-red-600 via-red-700 to-red-900 bg-clip-text text-transparent">
             Dhanush Krishna
           </span>
         </h1>
@@ -37,18 +37,20 @@ const Hero = () => {
           <span>BITS Pilani Dubai Campus</span>
         </div>
 
-        {/* Buttons (Red Theme) */}
+        {/* --- CHANGE 2 & 3: THEMED BUTTONS --- */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a 
             href="#projects" 
-            className="px-8 py-3 rounded-full bg-red-600 text-white font-semibold hover:bg-red-700 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(220,38,38,0.3)]"
+            // Changed to a deeper red (red-700) and updated shadow color
+            className="px-8 py-3 rounded-full bg-red-700 text-white font-semibold hover:bg-red-800 hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(153,27,27,0.4)]"
           >
             View My Work →
           </a>
           
           <a 
             href="#contact" 
-            className="px-8 py-3 rounded-full border border-slate-700 text-slate-300 font-medium hover:border-red-500 hover:text-red-400 transition-all duration-300 bg-slate-900/50"
+            // CHANGE 3: Removed slate-900/blue border. Swapped for neutral-950 and deep red hover.
+            className="px-8 py-3 rounded-full border border-red-900/30 text-slate-300 font-medium hover:border-red-600 hover:text-white hover:bg-red-950/30 transition-all duration-300 bg-neutral-950"
           >
             Contact Me
           </a>
