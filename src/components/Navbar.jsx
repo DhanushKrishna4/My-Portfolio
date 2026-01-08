@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           
           <a href="#home" className="group flex items-center gap-3">
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-red-700 to-red-950 text-white shadow-lg shadow-red-900/40 ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-red-800 to-red-950 text-white shadow-lg shadow-red-900/40 ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
               <span className="font-bold text-sm tracking-tighter">DK</span>
             </div>
             <span className="max-w-0 overflow-hidden whitespace-nowrap bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-xl font-bold text-transparent opacity-0 transition-all duration-500 ease-in-out group-hover:max-w-[200px] group-hover:opacity-100">
@@ -23,7 +23,7 @@ const Navbar = () => {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-slate-300 hover:text-red-500 hover:bg-red-950/30 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300"
+                  className="text-slate-300 hover:text-red-800 hover:bg-red-950/30 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300"
                 >
                   {item}
                 </a>
@@ -55,7 +55,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-slate-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium"
+                className="text-slate-300 hover:text-red-800 block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item}

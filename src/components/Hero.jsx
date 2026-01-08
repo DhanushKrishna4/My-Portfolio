@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="text-center max-w-4xl mx-auto">
         <h2 className="text-xl md:text-2xl font-medium text-slate-300 mb-4 tracking-wide">Hi, I'm</h2>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-          <span className="bg-gradient-to-r from-red-600 via-red-700 to-red-900 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-red-800 via-red-800 to-red-950 bg-clip-text text-transparent">
             Dhanush Krishna
           </span>
         </h1>
@@ -22,10 +22,10 @@ const Hero = () => {
           <span>BITS Pilani Dubai Campus</span>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#projects" className="px-8 py-3 rounded-full bg-red-700 text-white font-semibold hover:bg-red-800 hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(153,27,27,0.4)]">
+          <a href="#projects" className="px-8 py-3 rounded-full bg-red-800 text-white font-semibold hover:bg-red-900 hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(153,27,27,0.4)]">
             View My Work →
           </a>
-          <a href="#contact" className="px-8 py-3 rounded-full border border-red-900/40 text-slate-300 font-medium hover:border-red-600 hover:text-white hover:bg-red-950/20 transition-all duration-300 bg-transparent backdrop-blur-sm">
+          <a href="#contact" className="px-8 py-3 rounded-full border border-red-950/40 text-slate-300 font-medium hover:border-red-700 hover:text-white hover:bg-red-950/20 transition-all duration-300 bg-transparent backdrop-blur-sm">
             Contact Me
           </a>
         </div>
