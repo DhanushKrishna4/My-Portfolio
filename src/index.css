@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  /* This remains untouched: your diagonal red gradient */
+  /* YOUR EXACT BACKGROUND: Diagonal red-to-black gradient */
   background: linear-gradient(135deg, #000000 0%, #000000 50%, #450a0a 100%);
   background-attachment: fixed;
   color: #f8fafc;
@@ -30,32 +30,40 @@ body {
   min-height: 100vh;
 }
 
-/* Shooting Stars Animation - DIRECTION FIXED */
-.shooting-star {
+/* Lightning Strike Logic */
+.lightning-strike {
   position: absolute;
-  width: 2px;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent);
-  box-shadow: 0 0 10px 2px rgba(185, 28, 28, 0.8);
-  border-radius: 50%;
+  width: 1px;
+  height: 80vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(185, 28, 28, 0)
+  );
+  box-shadow: 0 0 15px 1px rgba(185, 28, 28, 0.9);
   opacity: 0;
-  /* Flipped rotation to shoot top-left to bottom-right */
-  transform: rotate(45deg);
-  animation: shoot linear infinite;
+  transform: skewX(-20deg);
+  animation: flash 6s infinite;
 }
 
-@keyframes shoot {
-  0% {
-    /* Starts at origin and moves positive X (right) and down */
-    transform: rotate(45deg) translateX(0);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
+@keyframes flash {
+  0%,
+  92%,
   100% {
-    /* Moves 800px toward the bottom right */
-    transform: rotate(45deg) translateX(800px);
+    opacity: 0;
+  }
+  93% {
+    opacity: 1;
+    transform: skewX(-20deg) scaleY(1.1);
+  }
+  94% {
+    opacity: 0.2;
+  }
+  95% {
+    opacity: 1;
+    transform: skewX(-22deg) scaleY(1);
+  }
+  97% {
     opacity: 0;
   }
 }
