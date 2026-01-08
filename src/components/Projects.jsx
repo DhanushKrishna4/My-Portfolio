@@ -46,13 +46,13 @@ const Projects = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Trigger animation only when the section is 10% visible
+        // CHANGED: Increased threshold to 0.3 so it waits longer before triggering
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Stop watching once triggered
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -63,18 +63,13 @@ const Projects = () => {
   }, []);
 
   return (
-    <section 
-      id="projects" 
-      ref={sectionRef}
-      className="py-20 px-4 relative z-10"
-    >
+    <section id="projects" ref={sectionRef} className="py-20 px-4 relative z-10">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index}
-              /* LOGIC CHANGE: If visible, add animation. If not, force opacity-0 (hidden). */
               className={`bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden hover:border-red-900/50 transition-colors p-6 flex flex-col justify-between ${
                 isVisible ? 'animate-fade-in-up' : 'opacity-0'
               }`}
